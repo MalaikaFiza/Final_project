@@ -1,0 +1,32 @@
+<?php require_once 'db.php'; ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Add Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Malaika</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Add New Item</h2>
+    <form action="add_item_backend.php" method="POST" novalidate>
+      <label>Title *</label>
+      <input name="title" type="text" maxlength="255" placeholder="Title" required>
+
+      <label>Description *</label>
+      <textarea name="description" rows="6" placeholder="Description" required></textarea>
+
+      <div style="margin-top:12px;">
+        <button class="btn" type="submit">Add Item</button>
+        <a href="dashboard.php" class="btn ghost">Cancel</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
